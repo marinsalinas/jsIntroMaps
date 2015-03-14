@@ -1,5 +1,9 @@
 
 var map;
+var monterrey = {
+	latitude: 25.6488126,
+	longitude: -100.3030789
+};
 function initialize() {
   var mapDiv = document.getElementById('map_canvas');
   if(!mapDiv){
@@ -8,8 +12,8 @@ function initialize() {
   }
 
    var mapOptions = {
-    zoom: 8,
-    center: new google.maps.LatLng(-34.397, 150.644)
+    zoom: 12,
+    center: new google.maps.LatLng(monterrey.latitude, monterrey.longitude)
   };
   map = new google.maps.Map(mapDiv,
       mapOptions);
@@ -46,7 +50,7 @@ function noHayGeolocalizacion(errorFlag) {
 
   var options = {
     map: map,
-    position: new google.maps.LatLng(25.6488126,-100.3030789),
+    position: new google.maps.LatLng(monterrey.latitude, monterrey.longitude),
     content: content
   };
 
